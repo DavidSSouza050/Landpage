@@ -1,0 +1,448 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-padding-top: 5rem;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+a{
+  all: unset;
+  cursor: pointer;
+}
+
+section {
+  padding: 40px 10%;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 4px 41px rgb(146, 170, 227);
+  padding: 14px 10%;
+  transition: 0.2s;
+  border-radius: 2px;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  font-size: 1rem;
+  padding: 11px 20px;
+  color: rgb(146, 170, 227);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navbar a:hover {
+  color: #333;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 180px;
+}
+
+/* Home */
+.home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  background: rgb(255, 255, 255);
+}
+
+.home-img {
+  flex: 1 1 10rem;
+  margin-top: 10px;
+}
+
+.home-text {
+  flex: 1 1 17rem;
+}
+
+/* Missões e Valores */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#title-valores {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.grid-item img {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.grid-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.grid-info {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Equipe */
+.equipe {
+  padding: 20px;
+  text-align: center;
+}
+
+.equipe-text h1 {
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-box {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-box:hover {
+  transform: translateY(-5px);
+}
+/* Serviços */
+.servicos {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.servicos-container h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.servico-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.servico-card:hover {
+  transform: translateY(-5px);
+}
+
+.servico-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #007acc;
+}
+
+.servico-card h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.servico-card p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+/*Projetos*/
+
+.projetos {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projetos-container h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projetos-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.projetos-card:hover {
+  transform: translateY(-5px);
+}
+
+.projetos-icon {
+  margin-bottom: 20px;
+  color: #007acc;
+  & img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+}
+
+.img-container{
+  width: 150px !important;
+  
+}
+
+.projetos-card h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.projetos-card p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  
+}
+
+/* Contato */
+.contato {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contato-container {
+  background-color: #ffffff;
+  padding: 30px;
+  max-width: 400px;
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contato-container h1 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px;
+  background-color: #f9fafb;
+  transition: border-color 0.3s ease;
+}
+
+.input-wrapper:hover {
+  border-color: #007acc;
+}
+
+.icon {
+  margin-right: 10px;
+  color: #007acc;
+}
+
+.contato-form input,
+.contato-form textarea {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  background: none;
+}
+
+.contato-form textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #005f99;
+}
+
+/* Responsivo: Ajustes para telas menores */
+
+@media (max-width: 768px) {
+  section {
+    padding: 70px 10%;
+  }
+
+  header {
+    padding: 14px 5%;
+  }
+
+  .navbar {
+    gap: 5px;
+  }
+
+  .navbar a {
+    padding: 10px 15px;
+  }
+
+  .home-text {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .home-img {
+    width: 100px;
+  }
+
+  .grid-section {
+    grid-template-columns: 1fr;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+  .contato-container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 120px;
+  }
+
+  .servicos-container h1 {
+    font-size: 24px;
+  }
+
+  .servico-card h2 {
+    font-size: 18px;
+  }
+
+  .projetos-container h1 {
+    font-size: 24px;
+  }
+
+  .projetos-card h2 {
+    font-size: 18px;
+  }
+
+  .contato-container h1 {
+    font-size: 18px;
+  }
+}
