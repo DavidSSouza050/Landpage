@@ -81,6 +81,10 @@ header {
 .home-img {
   flex: 1 1 10rem;
   margin-top: 10px;
+  & img{
+    width: 100%;
+    height: auto;
+  }
 }
 
 .home-text {
