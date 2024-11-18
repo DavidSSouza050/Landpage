@@ -14,7 +14,8 @@
   </head>
   <body>
     <!-- Header -->
-    <header>
+    <header id="header">
+
       <a href="#home" class="logo"
         ><img src="./image/logossd.png" alt="Logo-ssd"
       /></a>
@@ -27,7 +28,33 @@
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
+
     </header>
+
+    <header id="header-mobile">
+      
+      <nav class="navbar">
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#missao">Nossos valores</a></li>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a href="#home" class="logo">
+        <img src="./image/logossd.png" alt="Logo-ssd"
+      /></a>
+
+    </header>
+
 
     <!-- Home -->
     <section class="home " id="home">
@@ -261,4 +288,23 @@
       </div>
     </section>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+      const links = document.querySelectorAll(".nav-links li a"); // Seleciona todos os links do menu
+
+      // Alternar o menu quando clicar no ícone
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+
+      // Fechar o menu quando um link for clicado
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("show");
+        });
+      });
+    });
+  </script>
 </html>

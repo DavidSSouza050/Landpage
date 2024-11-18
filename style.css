@@ -39,7 +39,9 @@ header {
   transition: 0.2s;
   border-radius: 2px;
 }
-
+#header-mobile{
+  display: none;
+}
 .navbar {
   display: flex;
 }
@@ -375,22 +377,95 @@ button:hover {
 
 /* Responsivo: Ajustes para telas menores */
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+  .home{
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 776px) {
+  #header{
+    display: none;
+  }
+
   section {
     padding: 70px 10%;
   }
-
-  header {
-    padding: 14px 5%;
+  
+  #header-mobile{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    flex-direction: row;
   }
 
+  
   .navbar {
-    gap: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: white;
   }
 
-  .navbar a {
-    padding: 10px 15px;
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
   }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+
+  .nav-links li a:hover {
+    color: #f39c12;
+  }
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    background: black;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 10;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .home{
+
+    margin-top: 60px;
+  } 
 
   .home-text {
     flex: 1 1 100%;
@@ -419,6 +494,9 @@ button:hover {
   .contato-container {
     max-width: 90%;
   }
+
+
+
 }
 
 @media (max-width: 480px) {
